@@ -14,7 +14,7 @@ import {
     switch (action.type) {
       case MatchActionTypes.REFRESH_QUESTIOM:
         return {
-          question: {...action.payload},
+          question: action.payload,
           userAnswers:[]
         }
       case MatchActionTypes.ADD_ANSWER:

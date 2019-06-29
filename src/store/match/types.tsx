@@ -14,13 +14,13 @@ export interface IQuestion {
 }
 //Trivia current match state interface
 export interface IMatchState {
-    question: IQuestion | null,
+    question: IQuestion[] | null,
     userAnswers:string[]
 }
 
 interface IRefreshQuestionAction {
   type: typeof MatchActionTypes.REFRESH_QUESTIOM
-  payload: IQuestion
+  payload: IQuestion[] | null
 }
 interface IAddUserAnswerAction {
   type: typeof MatchActionTypes.ADD_ANSWER,
