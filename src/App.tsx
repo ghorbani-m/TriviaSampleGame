@@ -11,14 +11,15 @@ import store from "./store"
 
 //Screen Imports
 import Home from "./screens/home"
-
+import Match from "./screens/match"
 const AppNavigator = createSwitchNavigator(
   {
     Home: { screen: Home },
+    Match: { screen: Match },
   },
   {
     initialRouteName: "Home", 
-    backBehavior: "initialRoute"
+    backBehavior: "none"
   }
 );
 const AppContainer = createAppContainer(AppNavigator);
