@@ -67,7 +67,7 @@ export class Match extends Component<Props,State> {
             <Text style={styles.counter} >{match.userAnswers.length}/10</Text>
         </View>
         <View style={styles.cardContainer} onLayout={this.cardContainerOnLayout}>
-          <CardStack 
+        {cardStyle?<CardStack 
             style={styles.cardStack} 
             verticalSwipe={false} 
             horizontalSwipe={true} 
@@ -76,13 +76,13 @@ export class Match extends Component<Props,State> {
             secondCardZoom={.75}
             ref={ swiper => { this.swiper = swiper }}>
             {
-              cardStyle?match.question.map((question, index)=>
+              match.question.map((question, index)=>
                 <CardSwiper key={index} style={[styles.card,cardStyle]}>
                   <Card key={`card_${index}`} question={question} onAnswer={this.onAnswer}/>   
                 </CardSwiper>
-                ):null
+                )
             }
-          </CardStack> 
+          </CardStack>:null}
         </View>
         
     </View>
