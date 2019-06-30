@@ -47,14 +47,12 @@ export class Match extends Component<Props,State> {
   
   };
   async componentDidMount(){
-    console.log("this.props",this.props)
     await this.props.refreshQuestion();
     this.setState({loading:false});
   }  
   render() {
     const {cardStyle}=this.state;
     const {match}=this.props;
-    console.log("match",match)
     if(match.question==null)
       return(<View style={styles.container}>
         <ActivityIndicator size="large" color="#d500f9" />

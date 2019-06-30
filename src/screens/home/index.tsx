@@ -17,10 +17,7 @@ interface Props {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>
 }
 export class Home extends Component<Props> {
-  async componentDidMount(){
-    console.log("this.props",this.props)
 
-  }
   calculateSpentTime=(match:IMatchState)=>{
     const { startTime ,endTime} = match;
     if(startTime && endTime){
@@ -32,7 +29,6 @@ export class Home extends Component<Props> {
   }
   render() {
     const {navigation,match}=this.props;
-    console.log("Home match",match)
     return (
       <View style={styles.container}>
         {!match.question || match.question.length==0?

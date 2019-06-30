@@ -10,7 +10,6 @@ export class QuestionService{
         });
         if(response.status==200){
             const questions:IQuestion[]=response.data.results;
-            console.log("questions:",questions)
             return questions;
         }
         return null;
