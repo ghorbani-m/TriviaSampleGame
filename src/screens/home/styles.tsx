@@ -9,15 +9,21 @@ export default StyleSheet.create({
       backgroundColor: '#F5FCFF',
     },
     welcome: {
-      fontSize: 20,
+      fontSize: 25,
       textAlign: 'center',
       margin: 10,
-      color:"#9c27b0"
+      color:"#9c27b0",
+      padding:10,
+      marginTop:0,
+      paddingTop:0
+
     },
     instructions: {
       textAlign: 'center',
       marginBottom: 5,
-      color:"#9c27b0"
+      color:"#9c27b0",
+      padding:10
 
     },
+    section:{flex:1,justifyContent:"center"}
   });
