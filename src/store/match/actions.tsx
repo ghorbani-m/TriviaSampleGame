@@ -54,7 +54,7 @@ export const setEndTime: ActionCreator<
     return async (dispatch: Dispatch<MatchActions>) => {
       try {
         dispatch({
-          type: MatchActionTypes.SET_STARTTIME,
+          type: MatchActionTypes.SET_ENDTIME,
           payload:endTime
         });
       } catch (err) {
