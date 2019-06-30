@@ -12,7 +12,7 @@ const Button= (props:Props) => {
 
     return (
         <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
-            <Text style={[styles.text, textStyle]}>{title}</Text>
+            <Text numberOfLines={1} ellipsizeMode="tail" style={[styles.text, textStyle]}>{title}</Text>
         </TouchableOpacity>
     );
 };

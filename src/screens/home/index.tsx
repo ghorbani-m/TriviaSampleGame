@@ -33,7 +33,7 @@ export class Home extends Component<Props> {
       <View style={styles.container}>
         {!match.question || match.question.length==0?
         <View style={styles.section}>
-          <Text style={styles.welcome}>Welcome to sample Trivia Game!</Text>
+          <Text style={styles.welcome}>Welcome to Trivia Sample Game!</Text>
           <Text style={styles.instructions}>To get started, touch Start button</Text>
         </View>:
         <View style={styles.section}>
@@ -43,7 +43,7 @@ export class Home extends Component<Props> {
           <Text style={styles.welcome}>{this.calculateSpentTime(match)}</Text>
         </View>}
         <View style={styles.section}>
-          <Button title="Start Game" 
+          <Button title={match.question?"Play again":"Start Quiz"} 
             style={{backgroundColor:"#4a148c",maxHeight:50,paddingHorizontal:30}}
             textStyle={{color:"white"}}
             onPress={()=>{
