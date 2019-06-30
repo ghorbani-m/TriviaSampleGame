@@ -38,8 +38,8 @@ export default class Card extends Component<Props,State> {
             </View>
             <View style={{flex:1,paddingBottom:5}}>
                 {answers.map((answerText,index)=>
-                    <View style={{flex:1, padding:5,paddingHorizontal:15}}>
-                        <Button key={index} 
+                    <View key={index} style={{flex:1, padding:5,paddingHorizontal:15}}>
+                        <Button
                             title={answerText} 
                             style={[styles.button,index===buttonIndex?answerText===answer?styles.success:styles.wrong:{}]}
                             onPress={()=>!answer?this.onButtonClick(answerText,index):null} />
